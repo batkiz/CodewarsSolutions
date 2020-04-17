@@ -83,3 +83,22 @@ let repeatStr (n: int) (s: string) =
 // https://www.codewars.com/kata/50654ddff44f800200000004
 // The code does not execute properly. Try to figure out why.
 let multiply a b = a * b
+
+// https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097
+// Century From Year
+let century year =
+    (year / 100) + (if year % 100 > 0 then 1 else 0)
+
+// https://www.codewars.com/kata/5545f109004975ea66000086
+// Create a function that checks if a number n is divisible by two numbers x AND y.
+let isDivisible n x y =
+    (n % x = 0) && (n % y = 0)
+
+// https://www.codewars.com/kata/576b93db1129fcf2200001e6
+// Sum without highest and lowest number
+let sumArray (arr : list<int> option) =
+    match arr with
+    | Some(arr) -> match arr with
+                   | _ when arr.Length < 3 -> 0
+                   | _ -> List.sum arr - List.max arr - List.min arr
+    | None -> 0
