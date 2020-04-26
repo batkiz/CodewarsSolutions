@@ -91,14 +91,14 @@ let century year =
 
 // https://www.codewars.com/kata/5545f109004975ea66000086
 // Create a function that checks if a number n is divisible by two numbers x AND y.
-let isDivisible n x y =
-    (n % x = 0) && (n % y = 0)
+let isDivisible n x y = (n % x = 0) && (n % y = 0)
 
 // https://www.codewars.com/kata/576b93db1129fcf2200001e6
 // Sum without highest and lowest number
-let sumArray (arr : list<int> option) =
+let sumArray (arr: list<int> option) =
     match arr with
-    | Some(arr) -> match arr with
-                   | _ when arr.Length < 3 -> 0
-                   | _ -> List.sum arr - List.max arr - List.min arr
+    | Some(arr) ->
+        match arr with
+        | _ when arr.Length < 3 -> 0
+        | _ -> List.sum arr - List.max arr - List.min arr
     | None -> 0

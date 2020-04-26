@@ -8,6 +8,7 @@
     <ItemGroup>
         <None Include=".gitignore" />
         <Compile Include="8kyu.fs" />
+        <Compile Include="6kyu.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
 
